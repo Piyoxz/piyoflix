@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /** CSS DARK THEME PRIMARY COLORS */
+  --color-primary-100: #c800ff;
+  --color-primary-200: #d140ff;
+  --color-primary-300: #da5fff;
+  --color-primary-400: #e179ff;
+  --color-primary-500: #e891ff;
+  --color-primary-600: #eea8ff;
+  /** CSS DARK THEME SURFACE COLORS */
+  --color-surface-100: #121212;
+  --color-surface-200: #282828;
+  --color-surface-300: #3f3f3f;
+  --color-surface-400: #575757;
+  --color-surface-500: #717171;
+  --color-surface-600: #8b8b8b;
+  /** CSS DARK THEME MIXED SURFACE COLORS */
+  --color-surface-mixed-100: #231726;
+  --color-surface-mixed-200: #382c3a;
+  --color-surface-mixed-300: #4e4350;
+  --color-surface-mixed-400: #655b67;
+  --color-surface-mixed-500: #7d747e;
+  --color-surface-mixed-600: #958e97;
+  /** EXAMPLES */
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  background: black;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+
+  transform: translateX(0);
+  z-index: 1000; /* Increase the z-index so the buttons are above other elements */
+  color: #000; /* Change the color of the buttons to make them more visible */
+}
+
+.swiper-button-next {
+  right: -30px;
+}
+
+.swiper-button-prev {
+  left: -30px;
+}
+.fa-burger,
+.SearchBar {
+  z-index: 1000; /* Adjust the value as needed */
+}
+.clippath {
+  clip-path: polygon(35% 0, 100% 0, 100% 100%, 0 100%, 0 25%);
+}
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.mirror {
+  display: inline-block;
+  font-size: 30px;
+
+  -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+  -moz-transform: matrix(-1, 0, 0, 1, 0, 0);
+  -o-transform: matrix(-1, 0, 0, 1, 0, 0);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.mostly-customized-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: #454444; /* or add it to the track */
+}
+
+/* Add a thumb */
+.mostly-customized-scrollbar::-webkit-scrollbar-thumb {
+  background: orange;
+}
+
+.dashed-grid-paper {
+  /* options */
+  --grid-size: 30px;
+  --grid-strength: 1px;
+  --grid-dash: 5px;
+  --grid-gap: 10px;
+  --grid-color: #302e2e;
+  --paper-color: #000000;
+
+  /* styling */
+  background-color: var(--paper-color);
+  background-size:
+    var(--grid-gap) var(--grid-gap),
+    var(--grid-size) var(--grid-size);
+  background-image: linear-gradient(
+      to bottom,
+      transparent var(--grid-dash),
+      var(--paper-color) var(--grid-dash)
+    ),
+    linear-gradient(
+      to right,
+      var(--grid-color) var(--grid-strength),
+      transparent var(--grid-strength)
+    ),
+    linear-gradient(
+      to right,
+      transparent var(--grid-dash),
+      var(--paper-color) var(--grid-dash)
+    ),
+    linear-gradient(
+      to bottom,
+      var(--grid-color) var(--grid-strength),
+      transparent var(--grid-strength)
+    );
+}
+.bg-pattern {
+  background-color: #000000;
+  opacity: 0.8;
+  background-image: linear-gradient(#131313 1px, transparent 1px),
+    linear-gradient(to right, #131313 1px, #000000 1px);
+  background-size: 30px 30px;
+}
+
+.glow {
+  -webkit-box-shadow: 0px 0px 300px 29px rgba(45, 255, 196, 0.44);
+  -moz-box-shadow: 0px 0px 300px 29px rgba(45, 255, 196, 0.44);
+  box-shadow: 0px 0px 300px 29px rgba(45, 255, 196, 0.44);
+}
+
+/* .swiperbuttonnext,
+.swiperbuttonprevious {
+  background: #ffffff;
+  display: flex;
+  position: absolute;
+
+} */
+
+.custom-swiper-button {
+  position: absolute;
+  bottom: 20px;
+  z-index: 100;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.custom-swiper-button-prev {
+  right: 90px;
+}
+
+.custom-swiper-button-next {
+  right: 30px;
+}
+
+.custom-swiper-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 768px) {
+  .custom-swiper-button {
+    display: none;
+  }
+}
